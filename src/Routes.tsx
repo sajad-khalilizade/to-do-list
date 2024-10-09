@@ -1,11 +1,14 @@
-import {Route , Routes } from 'react-router-dom';
+import {BrowserRouter, Route , Routes } from 'react-router-dom';
+import App from './App';
 const HandleRoutes = () => {
     return (
-     <Routes>
-      <Route path='/' element={<h1>Home</h1>} />
-      <Route path='/about' element={<h1>About</h1>} />
-      <Route path='/contact' element={<h1>Contact</h1>} />
-     </Routes>
+      <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<App />} />
+      {/* <Route path="/blog/*" element={<BlogApp />} />
+      <Route path="/users/*" element={<UserApp />} /> */}
+    </Routes>
+    </BrowserRouter>
     );  
   }
   
